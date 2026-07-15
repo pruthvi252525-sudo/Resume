@@ -1,0 +1,14 @@
+# Node dependencies (Frontend bloat)
+node_modules/
+.next/
+dist/
+build/
+
+# Python Virtual Environments
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Local environment variables containing secret API keys
+.env
