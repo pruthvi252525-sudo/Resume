@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pruthviraj Chavan — Portfolio & Interactive Resume</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    html {
+      scroll-behavior: smooth;
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* Custom Glassmorphism Card Style */
+    .apple-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      transition: all 0.3s ease;
+    }
+
+    .apple-card:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-4px);
+    }
+
+    /* Gradient Text Accent */
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #86868b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-black text-white antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between text-xs font-medium text-gray-300">
+      <a href="#" class="font-bold text-white text-sm tracking-tight hover:opacity-80 transition flex items-center gap-2">
+        <!-- Small Nav Avatar -->
+        <img src="pruthvi.jpg" alt="Pruthviraj" class="w-6 h-6 rounded-full object-cover border border-white/20" onError="this.style.display='none'">
+        <span>PRUTHVIRAJ CHAVAN</span>
+      </a>
+      <div class="flex items-center space-x-6 md:space-x-8">
+        <a href="#about" class="hover:text-white transition">Philosophy</a>
+        <a href="#projects" class="hover:text-white transition">Featured Work</a>
+        <a href="#skills" class="hover:text-white transition">Stack & AI</a>
+        <a href="#contact" class="bg-blue-600 text-white px-3.5 py-1.5 rounded-full text-xs font-medium hover:bg-blue-500 transition">
+          Connect
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Profile Picture -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-12 relative overflow-hidden">
+    <div class="absolute w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <!-- PROFILE PICTURE CONTAINER -->
+    <div class="relative mb-6 group">
+      <!-- Glow Ring Behind Image -->
+      <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+      
+      <!-- Profile Image -->
+      <img 
+        src="pruthvi.jpg" 
+        alt="Pruthviraj Chavan" 
+        class="relative w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-2 border-white/20 shadow-2xl"
+        onError="this.onerror=null; this.src='https://via.placeholder.com/150/000000/FFFFFF?text=Pruthviraj';"
+      />
+    </div>
+
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-blue-400 mb-6">
+      <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+      <span>Action-Oriented Developer & Analytics Student</span>
+    </div>
+
+    <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-gradient max-w-5xl leading-none">
+      Pruthviraj Ganesh Chavan
+    </h1>
+
+    <p class="text-xl md:text-2xl text-gray-400 mt-6 max-w-2xl font-normal leading-relaxed">
+      Bridging <span class="text-white font-medium">Web Development</span>, <span class="text-white font-medium">Data Science</span>, and <span class="text-white font-medium">Business Strategy</span> using modern AI workflows.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+      <a href="https://sp-hatchery-portal.vercel.app" target="_blank" class="bg-white text-black font-medium px-6 py-3 rounded-full text-sm hover:bg-gray-200 transition inline-flex items-center gap-2">
+        <i data-lucide="external-link" class="w-4 h-4"></i>
+        Live Production Project
+      </a>
+      <a href="https://github.com/pruthvi252525-sudo" target="_blank" class="apple-card px-6 py-3 rounded-full text-sm text-gray-300 hover:text-white inline-flex items-center gap-2">
+        <i data-lucide="github" class="w-4 h-4"></i>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/pruthviraj-chavan-408878408/" target="_blank" class="apple-card px-6 py-3 rounded-full text-sm text-gray-300 hover:text-white inline-flex items-center gap-2">
+        <i data-lucide="linkedin" class="w-4 h-4"></i>
+        LinkedIn
+      </a>
+    </div>
+
+    <div class="mt-12 text-xs text-gray-500 flex flex-col items-center gap-2">
+      <span>Scroll to explore</span>
+      <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce"></i>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY SECTION -->
+  <section id="about" class="py-32 px-6 max-w-6xl mx-auto border-t border-white/10 relative">
+    <div class="absolute top-1/4 left-10 w-80 h-80 bg-rose-500/10 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-xs text-rose-400">
+        <i data-lucide="heart" class="w-3.5 h-3.5"></i>
+        <span>Personal Mindset & Principles</span>
+      </div>
+      <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gradient">
+        How I Think, Work & Interact
+      </h2>
+      <p class="text-gray-400 text-base md:text-lg leading-relaxed">
+        Beyond code and algorithms, technical work is driven by character, emotional intelligence, and real-world execution.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="apple-card p-8 md:p-10 rounded-3xl space-y-6 border border-rose-500/30 bg-rose-950/20">
+        <div class="p-3 bg-rose-500/20 text-rose-400 rounded-2xl w-fit border border-rose-500/30">
+          <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-rose-400">Core Value</span>
+          <h3 class="text-2xl font-bold text-white mt-1">Give Respect & Stay Kind at Heart</h3>
+        </div>
+        <p class="text-gray-300 text-base leading-relaxed">
+          I firmly believe in mutual respect—give respect to earn respect. Even when others don't return it, I choose never to be harsh. Remaining kind at heart keeps perspective grounded and relationships constructive.
+        </p>
+        <div class="pt-2 flex items-center gap-2 text-xs text-rose-300 font-medium">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span>Empathy over conflict</span>
+        </div>
+      </div>
+
+      <div class="apple-card p-8 md:p-10 rounded-3xl space-y-6 border border-blue-500/30 bg-blue-950/20">
+        <div class="p-3 bg-blue-500/20 text-blue-400 rounded-2xl w-fit border border-blue-500/30">
+          <i data-lucide="hammer" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-blue-400">Execution</span>
+          <h3 class="text-2xl font-bold text-white mt-1">Field Work Over Pure Theory</h3>
+        </div>
+        <p class="text-gray-300 text-base leading-relaxed">
+          Real understanding doesn't come from memorizing textbooks—it happens in the field. I focus on solving actual operational bottlenecks for business owners and local communities through hands-on building.
+        </p>
+        <div class="pt-2 flex items-center gap-2 text-xs text-blue-300 font-medium">
+          <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+          <span>Practical application first</span>
+        </div>
+      </div>
+
+      <div class="apple-card p-8 md:p-10 rounded-3xl space-y-6 border border-purple-500/30 bg-purple-950/20">
+        <div class="p-3 bg-purple-500/20 text-purple-400 rounded-2xl w-fit border border-purple-500/30">
+          <i data-lucide="eye" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-purple-400">Adaptability</span>
+          <h3 class="text-2xl font-bold text-white mt-1">Learning by Watching & Doing</h3>
+        </div>
+        <p class="text-gray-300 text-base leading-relaxed">
+          I am a visual learner and a quick adapter. By observing processes, analyzing patterns, and actively experimenting, I pick up new technical stacks, AI tools, and frameworks with high speed.
+        </p>
+        <div class="pt-2 flex items-center gap-2 text-xs text-purple-300 font-medium">
+          <i data-lucide="zap" class="w-4 h-4"></i>
+          <span>Fast adaptation loop</span>
+        </div>
+      </div>
+
+      <div class="apple-card p-8 md:p-10 rounded-3xl space-y-6 border border-emerald-500/30 bg-emerald-950/20">
+        <div class="p-3 bg-emerald-500/20 text-emerald-400 rounded-2xl w-fit border border-emerald-500/30">
+          <i data-lucide="message-square" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-emerald-400">Communication</span>
+          <h3 class="text-2xl font-bold text-white mt-1">Curiosity & Connecting with People</h3>
+        </div>
+        <p class="text-gray-300 text-base leading-relaxed">
+          I naturally enjoy talking to strangers and hearing different perspectives. Combined with an endless curiosity to try new experiences, this helps me understand what users genuinely need before writing code.
+        </p>
+        <div class="pt-2 flex items-center gap-2 text-xs text-emerald-300 font-medium">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Open-minded conversation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECT -->
+  <section id="projects" class="py-32 px-6 max-w-6xl mx-auto border-t border-white/10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-widest text-blue-500">Impact Project</span>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mt-2">Real-World Execution</h2>
+      </div>
+      <p class="text-gray-400 text-sm max-w-md mt-4 md:mt-0">
+        Empowering rural entrepreneurs through modern digital infrastructure and online accessibility.
+      </p>
+    </div>
+
+    <div class="apple-card p-8 md:p-12 rounded-3xl relative overflow-hidden group">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex items-center gap-3">
+            <span class="p-3 bg-blue-600/20 text-blue-400 rounded-2xl border border-blue-500/20">
+              <i data-lucide="store" class="w-6 h-6"></i>
+            </span>
+            <div>
+              <h3 class="text-2xl md:text-3xl font-bold text-white">SP Hatchery Web Portal</h3>
+              <p class="text-xs text-gray-400">Live Production Deployment</p>
+            </div>
+          </div>
+
+          <p class="text-gray-300 leading-relaxed text-base">
+            Designed and built a full digital portal for a rural hatchery business. This platform allows a local entrepreneur to move operations onto the web, showcase products, manage inquiries, and establish a digital brand presence.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 py-2">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="block text-xs text-gray-400">Core Objective</span>
+              <span class="text-sm font-semibold text-white mt-1 block">Rural Digitization</span>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 border border-white/5">
+              <span class="block text-xs text-gray-400">Target Audience</span>
+              <span class="text-sm font-semibold text-white mt-1 block">Local Business & Customers</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-gray-300">HTML5/CSS3</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-gray-300">JavaScript</span>
+            <span class="px-3 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-gray-300">Vercel</span>
+          </div>
+
+          <div class="pt-4">
+            <a href="https://sp-hatchery-portal.vercel.app" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-full text-sm transition">
+              <span>Visit Live Portal</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col justify-between p-8 rounded-2xl bg-black/50 border border-white/10 h-full">
+          <div class="space-y-6">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <span class="text-xs text-gray-400">Status</span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Active & Deployed
+              </span>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
+                <p class="text-xs text-gray-300">Simplified UI tailored specifically for non-technical rural users.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
+                <p class="text-xs text-gray-300">Fast page loads optimized for mobile connections in regional areas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-white/10 text-center">
+            <span class="text-xs text-gray-500 font-mono">URL: sp-hatchery-portal.vercel.app</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS GRID -->
+  <section id="skills" class="py-32 px-6 max-w-6xl mx-auto border-t border-white/10">
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <span class="text-xs font-semibold uppercase tracking-widest text-purple-400">Technical Capability</span>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mt-2">Tools, Tech & Workflows</h2>
+      <p class="text-gray-400 mt-4 text-base">
+        A versatile toolkit combining traditional software engineering with modern AI workflows.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="apple-card p-8 rounded-3xl space-y-6">
+        <div class="p-3 bg-blue-600/10 text-blue-400 rounded-2xl w-fit border border-blue-500/20">
+          <i data-lucide="code-2" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white">Core Languages</h3>
+        <ul class="space-y-3 pt-2">
+          <li class="flex items-center justify-between text-sm border-b border-white/5 pb-2">
+            <span class="text-gray-300">C & C++</span>
+            <span class="text-xs text-gray-500 font-mono">Algorithms</span>
+          </li>
+          <li class="flex items-center justify-between text-sm border-b border-white/5 pb-2">
+            <span class="text-gray-300">Python</span>
+            <span class="text-xs text-gray-500 font-mono">Data Science</span>
+          </li>
+          <li class="flex items-center justify-between text-sm pb-2">
+            <span class="text-gray-300">SQL</span>
+            <span class="text-xs text-gray-500 font-mono">Databases</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="apple-card p-8 rounded-3xl space-y-6">
+        <div class="p-3 bg-purple-600/10 text-purple-400 rounded-2xl w-fit border border-purple-500/20">
+          <i data-lucide="layout" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white">Web & Data Science</h3>
+        <ul class="space-y-3 pt-2">
+          <li class="flex items-center justify-between text-sm border-b border-white/5 pb-2">
+            <span class="text-gray-300">HTML5 & CSS3</span>
+            <span class="text-xs text-gray-500 font-mono">UI Layouts</span>
+          </li>
+          <li class="flex items-center justify-between text-sm border-b border-white/5 pb-2">
+            <span class="text-gray-300">Data Analytics</span>
+            <span class="text-xs text-gray-500 font-mono">Business Decision</span>
+          </li>
+          <li class="flex items-center justify-between text-sm pb-2">
+            <span class="text-gray-300">Business Studies</span>
+            <span class="text-xs text-gray-500 font-mono">Market Dynamics</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="apple-card p-8 rounded-3xl space-y-6">
+        <div class="p-3 bg-emerald-600/10 text-emerald-400 rounded-2xl w-fit border border-emerald-500/20">
+          <i data-lucide="sparkles" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white">AI Tools & Interpersonal</h3>
+        <ul class="space-y-3 pt-2">
+          <li class="flex items-center justify-between text-sm border-b border-white/5 pb-2">
+            <span class="text-gray-300">AI Applications</span>
+            <span class="text-xs text-gray-500 font-mono">Accelerated Workflow</span>
+          </li>
+          <li class="flex items-center justify-between text-sm border-b border-white/5 pb-2">
+            <span class="text-gray-300">Communication</span>
+            <span class="text-xs text-gray-500 font-mono">Field Work</span>
+          </li>
+          <li class="flex items-center justify-between text-sm pb-2">
+            <span class="text-gray-300">Visual Learning</span>
+            <span class="text-xs text-gray-500 font-mono">Adaptability</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="py-32 px-6 max-w-4xl mx-auto text-center border-t border-white/10">
+    <div class="inline-flex p-4 rounded-full bg-blue-600/10 text-blue-400 mb-6 border border-blue-500/20">
+      <i data-lucide="mail" class="w-8 h-8"></i>
+    </div>
+    
+    <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gradient mb-6">
+      Let’s Build Something Together.
+    </h2>
+    
+    <p class="text-gray-400 text-lg max-w-xl mx-auto mb-10">
+      Whether you have a business project, an opportunity, or want to discuss web dev, data, or AI—my inbox is open.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="mailto:pruthvi252525@gmail.com" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-4 rounded-full text-base transition inline-flex items-center gap-2 w-full sm:w-auto justify-center">
+        <i data-lucide="send" class="w-4 h-4"></i>
+        <span>pruthvi252525@gmail.com</span>
+      </a>
+      <a href="https://www.linkedin.com/in/pruthviraj-chavan-408878408/" target="_blank" class="apple-card text-white font-medium px-8 py-4 rounded-full text-base hover:bg-white/10 transition inline-flex items-center gap-2 w-full sm:w-auto justify-center">
+        <i data-lucide="linkedin" class="w-4 h-4"></i>
+        <span>Connect on LinkedIn</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-12 text-center text-xs text-gray-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>© 2026 Pruthviraj Ganesh Chavan. All rights reserved.</p>
+      <div class="flex items-center space-x-6">
+        <a href="https://github.com/pruthvi252525-sudo" target="_blank" class="hover:text-white transition">GitHub</a>
+        <a href="https://www.linkedin.com/in/pruthviraj-chavan-408878408/" target="_blank" class="hover:text-white transition">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
